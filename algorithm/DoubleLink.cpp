@@ -55,7 +55,22 @@ bool InitList(SLink &L){
 
 
 
-
+//插入头结点
+CLType *CLAddFirst(CLType *head,Data nodeData){
+    CLType *node;
+    if(!(node=(CLType *)malloc(sizeof(CLType)){   //新分配内存空间，保存结点
+        printf("malloc memory failed!\n");
+        return NULL;
+    }
+    else{
+        node->nodeData=nodeData;       //保存数据
+        node->nextNode=head;           //非空时head原先指向node,现在相当于把新增结点node指向头指针head所指向的结点
+        head=node;  //head 指向新增的结点
+        return head;
+        }
+}
+        
+//查找结点
 
 
 
